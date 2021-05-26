@@ -23,9 +23,10 @@ sur un Bot Discord !
 
 ```
 pylint==2.8.2
+py-heat==0.0.6
 ```
 
-### Pylint uses
+### Pylint
 
 Linter was configured in `.pylintrc` file
 
@@ -36,3 +37,12 @@ Linter was configured in `.pylintrc` file
 #### After the third step rated at 9.14
 
 ![plot3](img/third-step.png)
+
+### Py-heat
+
+#### Monitoring heatmap
+
+*Sur cette image j'ai été récupérer le moment le plus lent de mon code pour différencier
+les blocs de code découpés*
+
+![plot1](img/Figure_1.png)
