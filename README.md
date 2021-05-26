@@ -1,6 +1,6 @@
 # Project automate
 
-Manage by: *Renaud ANGLES*
+Managed by: *Renaud ANGLES*
 
 ## About me
 
