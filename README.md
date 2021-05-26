@@ -42,7 +42,7 @@ Linter was configured in `.pylintrc` file
 
 #### Monitoring heatmap
 
-*Sur cette image j'ai été récupérer le moment le plus lent de mon code pour différencier
-les blocs de code découpés*
+*Sur cette image j'ai récupéré la partie la plus lente de mon code pour différencier
+les blocs découpés*
 
 ![plot1](img/Figure_1.png)
