@@ -2,7 +2,9 @@ version: "3.7"
 
 services:
   sonarqube:
-    image: sonarqube:lts
+    image: sonarqube
+    expose:
+      - 9000
     ports:
       - "9000:9000"
     volumes:
