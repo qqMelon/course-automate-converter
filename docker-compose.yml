@@ -31,10 +31,11 @@ services:
       - postgresql_data:/var/lib/postgresql/data
 
   sonarscanner:
-    container_name: sonarscanner
-    image: newtmitch/sonar-scanner
+    image: sonarsource/sonar-scanner-cli
     networks:
       - sonarnet
+    environment:
+      - sonar.projectKey=5faff1abc11194c8e31fdde397061a1d5dc6a3ba
     volumes:
       - ./:/usr/src
 
