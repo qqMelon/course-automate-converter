@@ -10,10 +10,10 @@ puis finalement je suis partie sur le langage Python. Un langage qui m'a beaucou
 petites difficultés liée au langage lui-même mais rien de bloquant !
 
 ---
+
 J'ai donc développer un minimum fonctionnel de cette app à cause de la perte de temps que j'ai cumulé
 Mais j'ai pour but de le rendre totalement fonctionnel avec plusieurs choix de conversion
 sur un Bot Discord !
----
 
 *Bref l'historique de mon code se trouve dans les commits :D*
 
