@@ -30,6 +30,19 @@ services:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
 
+  sonarscanner:
+    container_name: sonarscanner
+    image: newtmitch/sonar-scanner
+    networks:
+      - sonarnet
+    environment:
+      - Dsonar.projectKey=prout
+      - Dsonar.source=.
+      - Dsonar.host.url=http://evankhell:9000
+      - Dsnoar.login=5faff1abc11194c8e31fdde397061a1d5dc6a3ba
+    volumes:
+      - ./:/usr/src
+
 networks:
   sonarnet:
 
