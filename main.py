@@ -19,36 +19,36 @@ def reader(file):
 
     print(catch_anchor)
 
-    _STATE = '<no_state>'
-    _STATE_T = '<no_state>'
+    base_state = '<no_state>'
+    base_state_end = '<no_state>'
 
-    for index, line in enumerate(lines):
+    for _, line in enumerate(lines):
 
         line_splited = line.split(' ')[0]
 
-        _STATE = 'in_loop'
+        base_state = 'in_loop'
 
         if line_splited:
-            if '```' in line_splited and _STATE_T == '<no_state>':
+            if '```' in line_splited and base_state_end == '<no_state>':
                 print('Start code block')
-                _STATE_T = 'in_code_block'
-            elif '```' in line_splited and _STATE_T == 'in_code_block':
+                base_state_end = 'in_code_block'
+            elif '```' in line_splited and base_state_end == 'in_code_block':
                 print('End code block')
-                _STATE_T = '<no_state>'
-            elif line_splited == '###' and _STATE_T == '<no_state>':
-                _STATE = 'title_lvl_3'
-            elif line_splited == '##' and _STATE_T == '<no_state>':
-                _STATE = 'title_lvl_2'
-            elif line_splited == '#' and _STATE_T == '<no_state>':
-                _STATE = 'title_lvl_1'
-            elif (line_splited == '*' or line_splited == '-') and _STATE_T == '<no_state>':
-                _STATE = 'in_array'
-            elif line_splited == '' and _STATE_T == '<no_state>':
-                _STATE = 'empty_line'
+                base_state_end = '<no_state>'
+            elif line_splited == '###' and base_state_end == '<no_state>':
+                base_state = 'title_lvl_3'
+            elif line_splited == '##' and base_state_end == '<no_state>':
+                base_state = 'title_lvl_2'
+            elif line_splited == '#' and base_state_end == '<no_state>':
+                base_state = 'title_lvl_1'
+            elif line_splited in ('*', '-') and base_state_end == '<no_state>':
+                base_state = 'in_array'
+            elif line_splited == '' and base_state_end == '<no_state>':
+                base_state = 'empty_line'
         else:
-            _STATE = 'on_para_text'
+            base_state = 'on_para_text'
 
-        print(_STATE)
+        print(base_state)
 
     file_readed.close()
 
